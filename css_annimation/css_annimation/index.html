@@ -1,0 +1,1071 @@
+<html>
+<head>
+<title> WEB PAGE </title>
+<!-- Nav bar stylesheet -->
+<style>
+    .html{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background: #f2f2f2;
+}
+nav{
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  padding: 0 0 0 120px;
+}
+nav .nav-items li{
+  list-style: none;
+  padding: 0 15px;
+}
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+nav .nav-items li a:hover{
+  color: #ff3d00;
+}
+nav form{
+  display: flex;
+  height: 40px;
+  padding: 2px;
+  background: #1e232b;
+  min-width: 18%!important;
+  border-radius: 2px;
+  border: 1px solid rgba(155,155,155,0.2);
+}
+nav form .search-data{
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  color: #fff;
+  font-size: 17px;
+  border: none;
+  font-weight: 500;
+  background: none;
+}
+nav form button{
+  padding: 0 15px;
+  color: #fff;
+  font-size: 17px;
+  background: #ff3d00;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+nav form button:hover{
+  background: #e63600;
+}
+nav .menu-icon,
+nav .cancel-icon,
+input[type=text] {
+  width: 130px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+  width: 100%;
+}
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon{
+  display: none;
+}
+@media (max-width: 45px) {
+  nav{
+    padding: 0 5px;
+  }
+}
+@media (max-width: 10px){
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align:left;
+    size: 10px;
+    padding: 0 0 0 0px;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    background: #14181f;
+    display: inline-block;
+    transition: right 0.3s ease;
+  }
+  nav .nav-items.active{
+    left: 0px;
+  }
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav-items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: top 0.3s ease, opacity 0.1s ease;
+  }
+  nav form.active{
+    top: 95px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0px;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+    margin: -20px 0 0;
+  }
+  nav form:after{
+    position: absolute;
+    content: '';
+    height: 60px;
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    min-width: calc(100% + 20px);
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .search-icon{
+    line-height: 40px;
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  }
+  nav .menu-icon span.hide,
+  nav .search-icon.hide{
+    display: none;
+  }
+  nav .cancel-icon.show{
+    display: block;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align:center;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.space{
+  margin: 10px 0;
+}
+nav .logo.space{
+  color: red;
+  padding: 0 15px 0 0;
+}
+@media (max-width: 980px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 20px;
+  }
+  nav form{
+    right: 30px;
+  }
+}
+@media (max-width: 350px){
+  nav .menu-icon,
+  nav .cancel-icon,
+  nav .search-icon{
+    margin: 0 10px;
+    font-size: 16px;
+  }
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content header{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .text{
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .space{
+  margin: 10px 0;
+}
+</style>
+
+<!-- Nav bar -->
+<nav>
+<div class="menu-icon">
+</div>
+<div class="logo">
+  <img src="sctpl_logo.png" alt="Logo" style="height: 40px;">&nbsp;&nbsp;
+</div>
+<div class="search-icon">
+  <span class="fas fa-search" ></span></div>
+  <div class="cancel-icon">
+  <span class="fas fa-times"></span></div>
+  <form action="#">
+  <input type="text" name="search" placeholder="Search.." >
+  <button type="submit" class="fas fa-search" ></button>
+  </form>
+  
+<div class="nav-items" >
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Blogs</a></li>
+<li><a href="#">Testimonials</a></li>
+<li><a href="#">Contact Us</a></li>
+<!-- <link rel="stylesheet" href="/home/jeberson/Desktop/Style.css"> -->
+</div>
+</nav>
+    <div class="content">
+      <header class="space">
+</header>
+      <div class="space text">
+</div>
+</div>
+<script>
+    const menuBtn = document.querySelector(".menu-icon span");
+    const searchBtn = document.querySelector(".search-icon");
+    const cancelBtn = document.querySelector(".cancel-icon");
+    const items = document.querySelector(".nav-items");
+    const form = document.querySelector("form");
+    menuBtn.onclick = ()=>{
+      items.classList.add("active");
+      menuBtn.classList.add("hide");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+    cancelBtn.onclick = ()=>{
+      items.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      searchBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      form.classList.remove("active");
+      cancelBtn.style.color = "#ff3d00";
+    }
+    searchBtn.onclick = ()=>{
+      form.classList.add("active");
+      searchBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+    }
+  </script>
+
+<div class="typewriter">
+  <h1>Hi folks, Welcome to Sctpl :)</h1>
+</div>
+<style>
+  /* GLOBAL STYLES */
+/* body {
+  background: #333;
+  padding-top: 5em;
+  display: flex;
+  justify-content: center;
+} */
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter h1 {
+  color:black;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /*The typwriter cursor */
+  white-space:normal; /*Keeps the content on a single line */
+  /* margin:0 auto; Gives that scrolling effect as the typing happens */
+  margin-right:60%;
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-start infinite;
+}
+
+/* The typing effect *
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+</style>
+<!-- Hover image effect sr -->
+
+<div class="accordian">
+  <ul>
+      <li>
+          <div class="image_title">
+              <a href="#">KungFu Panda</a>
+          </div>
+          <a href="#">
+              <!-- <img src="C:\Users\win8\Desktop\Suven Technology\Kung fu panda.jpg" style="height: 100%;width: 640px;"> -->
+              <!--<img src="/home/jeberson/Downloads/Kung fu panda.jpg" style="height: 100%;width: 640px;">-->
+              <img src="./Kung fu panda.jpg" style="height: 100%;width: 640px;">
+          </a>
+      </li>
+      <li>
+          <div class="image_title">
+              <a href="#">Toy Story 2</a>
+          </div>
+          <a href="#">
+              <!-- <img src="C:\Users\win8\Desktop\Suven Technology\Toy Story.jpeg" style="height: 100%;width: 640px;"> -->
+              <!--<img src="/home/jeberson/Downloads/Toy story.jpg" style="height: 100%;width: 640px;">-->
+              <img src="./Toy story.jpg" style="height: 100%;width: 640px;">
+          </a>
+      </li>
+      <li>
+          <div class="image_title">
+              <a href="#">Wall-E</a>
+          </div>
+          <a href="#">
+              <!-- <img src="C:\Users\win8\Desktop\Suven Technology\Wall E.jpg" style="height: 100%;width: 640px;"> -->
+              <!--<img src="/home/jeberson/Downloads/Wall E.jpg" style="height: 100%;width: 640px;">-->
+              <img src="./Wall E.jpg" style="height: 100%;width: 640px;">
+          </a>
+      </li>
+      <li>
+          <div class="image_title">
+              <a href="#">Up</a>
+          </div>
+          <a href="#">
+              <!-- <img src="C:\Users\win8\Desktop\Suven Technology\UP.jpg" style="height: 100%;width: 640px;"> -->
+              <!--<img src="/home/jeberson/Downloads/UP.jpg" style="height: 100%;width: 640px;">-->
+              <img src="./UP.jpg" style="height: 100%;width: 640px;">
+          </a>
+      </li>
+      <li>
+          <div class="image_title">
+              <a href="#">Cars 2</a>
+          </div>
+          <a href="#">
+              <!-- <img src="C:\Users\win8\Desktop\Suven Technology\Cars 2.jpg" style="height: 100%;width: 640px;"> -->
+              <!--<img src="/home/jeberson/Downloads/Cars 2.jpg" style="height: 100%;width: 640px;">-->
+              <img src="./Cars 2.jpg" style="height: 100%;width: 640px;">
+              <!-- <link rel="stylesheet" href="/home/jeberson/Downloads/hover.css"> -->
+              <!-- <link rel="stylesheet" href="hover.css"> -->
+          </a>
+      </li>
+  </ul>
+</div>
+<!-- Hover image effect ends -->
+
+<!-- Hover image effect stylesheet -->
+<style>
+.html{
+	margin: 0; 
+	padding: 0;
+}
+.body {
+	background: #ccc; 
+	font-family: arial, verdana, tahoma;
+}
+/* 
+Width of image = 640px
+total images = 5
+so width of hovered image = 640px
+width of un-hovered image = 40px 
+so total container width = 640 + 40*4 = 800px;
+default width = 800/5 = 160px; */
+.accordian {
+	width: 800px; height: 420px;
+	overflow: hidden;
+	margin: 90px auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+.accordian ul {
+	width: 2000px;
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+}
+.accordian ul:hover li {width: 40px;}
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li img {
+	display: block;
+}
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; 
+	bottom: 0;	
+	width: 640px;	
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+}
+</style>
+<!-- Hover image effect style sheet ends -->
+
+<!-- image with caption hover effect -->
+
+<ul id="rig">
+  <li>
+      <a class="rig-cell" href="#">
+          <!--<img class="rig-img" src="/home/jeberson/Downloads/rose.jpg">-->
+          <img class="rig-img" src="./rose.jpg">
+          <!-- <span class="rig-overlay"></span> -->
+          <span class="rig-text"><p>A rose is a woody perennial flowering plant of the genus Rosa, in the family Rosaceae, or the flower it bears.[1] There are over three hundred species and tens of thousands of cultivars.[1] They form a group of plants that can be erect shrubs, climbing, or trailing, with stems that are often armed with sharp prickles.[1] Flowers vary in size and shape and are usually large and showy, in colours ranging from white through yellows and reds.[1] Most species are native to Asia, with smaller numbers native to Europe, North America, and northwestern Africa.[1] Species, cultivars and hybrids are all widely grown for their beauty and often are fragrant. Roses have acquired cultural significance in many societies.[1] Rose plants range in size from compact, miniature roses, to climbers that can reach seven meters in height.[1] Different species hybridize easily, and this has been used in the development of the wide range of garden roses.[1]</p></span>
+      </a>
+  </li>
+</ul>
+
+<!-- image with caption stylesheet -->
+<style>
+#rig {
+  max-width:75%;
+  height: 100%;
+  margin:10px 120px; /*center aligned*/
+  padding:0;
+  font-size:0; /* Remember to change it back to normal font size if have captions */
+  list-style:none;
+}
+#rig li {
+  display: inline-block;
+  *display:inline;/*for IE6 - IE7*/
+  width:25%;
+  vertical-align:middle;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+      
+/* The wrapper for each item */
+.rig-cell {
+  /*margin:12px;
+  box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+  display:block;
+  position:relative;
+  overflow:hidden;
+}
+      
+/* If have the image layer */
+.rig-img {
+  /* display:block; */
+  width: 100%;
+  height: 100%;
+  border:blueviolet;
+  border-style:double;
+  border-radius: 10px;
+  transform:scale(1);
+  transition:all 1s;
+}
+
+#rig li:hover .rig-img {
+  transform:scale(1.05);
+}
+      
+/* If have the overlay layer */
+.rig-overlay {
+  position: absolute;
+  display:block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: #3DC0F1 url(img/link.png) no-repeat center 20%;
+  background-size:50px 50px;
+  opacity:0;
+  filter:alpha(opacity=0);/*For IE6 - IE8*/
+  transition:all 0.6s;
+}
+#rig li:hover .rig-overlay {
+  opacity:0.8;
+}
+
+/* If have captions */
+.rig-text {
+  display:block;
+  padding:0 40px;
+  box-sizing:border-box;
+  position:absolute;
+  left:0;
+  width:100%;
+  text-align:center;
+  text-transform:capitalize;
+  font-size:22px;
+  font-weight:bolder;
+  font-family: 'Oswald', sans-serif;
+  font-weight:normal!important;
+  top:20%;
+  color:black;
+  opacity:0;
+  filter:alpha(opacity=0);/*For older IE*/
+  transform:translateY(-20px);
+  transition:all .3s;
+}
+#rig li:hover .rig-text {
+  transform:translateY(0px);
+  opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+  #rig li {
+      width:100%;
+  }
+}
+
+@media (max-width: 700px) {
+  #rig li {
+      width:33.33%;
+  }
+}
+
+@media (max-width: 550px) {
+  #rig li {
+      width:50%;
+  }
+}
+</style>
+<!-- image with caption hover ends -->
+
+<!-- Alternating Blockquotes -->
+
+<blockquote>
+  <p><q>The U.S. is fast approaching $19,000,000,000,000.00 in national debt. This is mathematically impossible to ever pay back &hellip; even if every American was taxed at 100%.</q></p>
+  <footer>Charles Goyette, The Dollar Meltdown</footer>
+</blockquote>
+<blockquote>
+  <p><q>79 million Baby Boomers are about to retire, pull their money out of the economy, and demand their $35 Trillion Dollars in Social Security &amp; Medicare. Think that through&hellip;</q></p>
+  <footer>Robert Kiyosaki</footer>
+</blockquote>
+<blockquote>
+  <p><q>23.4% of Americans are Currently Unemployed &hellip; not the 9.1% they&rsquo;d like you to believe.</q></p>
+  <footer>ShadowStats.com</footer>
+</blockquote>
+<!-- Alternating Blockquotes stylesheet -->
+<style>
+  blockquote {
+  margin: 0 auto;
+  padding: 1em;
+  border-left: 5px solid #999;
+}
+blockquote:before {
+  display: none;
+}
+blockquote:not(:first-of-type) {
+  margin-top: .5em;
+}
+blockquote p {
+  color: black;
+  font-size: 20pt;
+  line-height: 1.4;
+  font-family: 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+}
+blockquote footer {
+  margin-top: .5em;
+  padding: 0;
+  color: black;
+  font-size: 16pt;
+  text-align: left;
+  font-style: italic;
+  font-weight: bolder;
+}
+blockquote footer:before {
+  content: '— ';
+}
+blockquote:nth-of-type(even) {
+  text-align: right;
+  border-left: none;
+  border-right: 5px solid #999;
+}
+blockquote:nth-of-type(even) footer {
+  text-align: right;
+}
+blockquote:nth-of-type(even) footer:before {
+  content: '';
+}
+blockquote:nth-of-type(even) footer:after {
+  content: ' —';
+}
+@element 'blockquote' and (min-width: 300px) {
+  blockquote {
+    padding: 1em 20% 1em 1em;
+  }
+  blockquote p {
+    font-size: 14pt;
+  }
+  blockquote:nth-of-type(even) {
+    padding: 1em 1em 1em 20%;
+  }
+}
+</style>
+
+<!-- Alternating Blockquotes stylesheet ends -->
+<!-- Pricing tables -->
+
+
+<!-- <h2 id="title">Pricing tables</h2>  -->
+<div class="hover-table-layout">
+    <div class="listing-item">
+        <figure class="image">
+            <img src="https://i.ytimg.com/vi/MTrzTABzLfY/maxresdefault.jpg" alt="image">
+            <figcaption>
+              <div class="caption">
+                <h1>Enterprise</h1>
+                <p>$59</p>
+                </div>
+            </figcaption>
+        </figure>
+        <div class="listing">
+            <h4>10GB Disk Space</h4>
+            <h4>100GB Monthly Bandwidth</h4>
+            <h4>20 Email Accounts</h4>
+            <h4>Unlimited subdomains</h4>
+        </div>
+    </div>
+    <div class="listing-item">
+        <figure class="image">
+            <img src="https://i.ytimg.com/vi/MTrzTABzLfY/maxresdefault.jpg" alt="image">
+            <figcaption>
+               <div class="caption">
+                <h1>Professional</h1>
+                <p>$29</p>
+                </div>
+            </figcaption>
+        </figure>
+        <div class="listing">
+            <h4>5GB Disk Space</h4>
+            <h4>50GB Monthly Bandwidth</h4>
+            <h4>10 Email Accounts</h4>
+            <h4>Unlimited subdomains</h4>
+        </div>
+    </div>
+    <div class="listing-item">
+        <figure class="image">
+            <img src="https://i.ytimg.com/vi/MTrzTABzLfY/maxresdefault.jpg" alt="image">
+            <figcaption>
+               <div class="caption">
+                <h1>Standard</h1>
+                <p>$17</p>
+                </div>
+            </figcaption>
+        </figure>
+        <div class="listing">
+            <h4>3GB Disk Space</h4>
+            <h4>25GB Monthly Bandwidth</h4>
+            <h4>5 Email Accounts</h4>
+            <h4>Unlimited subdomains</h4>
+        </div>
+    </div>
+    <div class="listing-item">
+      <figure class="image">
+          <img src="https://i.ytimg.com/vi/MTrzTABzLfY/maxresdefault.jpg" alt="image">
+          <figcaption>
+             <div class="caption">
+              <h1>Basic</h1>
+              <p>$9</p>
+              </div>
+          </figcaption>
+      </figure>
+      <div class="listing">
+          <h4>1GB Disk Space</h4>
+          <h4>10GB Monthly Bandwidth</h4>
+          <h4>2 Email Accounts</h4>
+          <h4>Unlimited subdomains</h4>
+      </div>
+  </div>
+    
+</div>
+
+<!-- Pricing table stylesheet -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+body{
+  background: #5D3F6A;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#title{
+  text-align: center;
+  color:white;
+  font-size:30px;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+.hover-table-layout {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+   -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  max-width:1000px;
+  margin:0 auto;
+}
+.listing-item {
+   display: block;
+   width:100%;
+  margin-bottom:20px;
+    float: left;
+    background: #fff;
+    border-radius:10px;
+    z-index:0;
+  cursor:pointer;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+      -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.10);
+
+}
+.listing-item:hover,  .listing-item.active{
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+    transform: scale(1.05);
+    -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  z-index:2;
+
+}
+.listing-item .listing{
+    padding:20px;
+    position:relative;  
+}
+.listing-item .listing:before{
+    content:"";
+  position:absolute;
+  top:-15px;
+  left:-o-calc(50% - 15px);
+  left:-moz-calc(50% - 15px);
+  left:-webkit-calc(50% - 15px);
+  left:calc(50% - 15px);
+  border-bottom:20px solid #fff;
+  border-left:20px solid transparent;
+  border-right:20px solid transparent;
+}
+  figure.image img {
+    width:100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+figure.image {
+    position: relative;
+  margin: 0;
+    padding: 0;
+}
+figure.image figcaption {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 4px;
+  background: rgba(0,0,0,0.6);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+figcaption .caption{
+  position:relative;
+  top:50%;
+  -moz-transform:translateY(-50%);
+  -webkit-transform:translateY(-50%);
+  transform:translateY(-50%);
+
+}
+figcaption h1{
+    color:white;
+  font-weight:bold;
+    font-size:18px;
+  text-transform: uppercase;
+}
+figcaption p{
+  color:white;
+  font-size:12px;
+}
+.listing h4 {
+   
+    font-size: 13px;
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.listing h4:not(:last-child){
+   border-bottom: 1px solid #ccc;
+}
+.listing-item:hover figure.image figcaption{
+       background: rgba(195, 39, 43, 0.6);
+}
+@media only screen and (min-width:540px){
+  .listing-item {
+   display: block;
+   width: -webkit-calc(100%/4);
+   width: -moz-calc(100%/4);
+    width: calc(100%/4);
+  }
+}
+@media only screen and (min-width:1024px){
+  .hover-table-layout{
+        padding: 30px;
+  }
+}
+</style>
+
+<!-- Footer -->
+<!-- Icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Icon library ends  -->
+<footer class="site-footer">
+  <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+          <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+        </ul>
+      </div>      
+    
+  <div class="container">
+    <div class="row">
+      <div class="col"><div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2019. Suven Consultants and technology pvt ltd. All rights reserved
+        </p>
+      </div>
+
+      
+    </div>
+  </div>
+</footer>
+
+<!-- Footer stylesheet -->
+<style>
+  .fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 15px;
+  text-decoration: none;
+}
+  .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+  height: 15%;
+  text-align-last: center;
+}
+.site-footer a
+{
+  color:#737373;
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  text-align: center;
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px;
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:10px;
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center;
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none;
+  
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px;
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear;
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe;
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998;
+  
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+</style>  
+
+</body>
+</html>
